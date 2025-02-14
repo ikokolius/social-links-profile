@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+:root {
+  --blue-attribution: hsl(228, 45%, 44%);
+  --green: hsl(75, 94%, 57%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --white: hsl(0, 0%, 100%);
+  --spacing-150: 12px;
+  --spacing-175: 15px;
+  --spacing-200: 18px;
+  --spacing-300: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: var(--grey-900);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: var(--spacing-150);
+}
+
+.profile-card {
+  background-color: var(--grey-800);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-300);
+  row-gap: var(--spacing-300);
+  text-align: center;
+  width: 100%;
+
+  img {
+    border-radius: 50%;
+    display: block;
+    height: 88px;
+    margin: 0 auto 24px;
+    width: 88px;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: var(--spacing-150);
+  }
+
+  header p {
+    color: var(--green);
+    font-weight: 600;
+  }
+
+  .social-links-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-link {
+    background-color: var(--grey-700);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: var(--spacing-200);
+    text-decoration: none;
+    display: block;
+    padding-block: 14px;
+    color: inherit;
+  }
+
+  .social-link:hover,
+  .social-link:active {
+    background-color: var(--green);
+    color: var(--grey-900);
+  }
+
+  .content p {
+    margin-bottom: var(--spacing-300);
+  }
+}
+
+@media (min-width: 340px) {
+  .profile-card {
+    width: 330px;
+  }
+}
+
+@media (min-width: 640px) {
+  .profile-card {
+    width: 380px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+
+  a {
+    color: var(--blue-attribution);
+  }
+}
